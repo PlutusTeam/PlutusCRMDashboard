@@ -12,7 +12,12 @@
       <va-sidebar-item :active="isItemChildsActive(route)" :to="route.children ? undefined : { name: route.name }">
         <va-sidebar-item-content>
           <va-sidebar-item-title>
-            <va-icon :name="route.meta.icon" class="va-sidebar-item__icon"/>
+            <div v-if="route.meta.icon=='plutus-logo'">
+              <plutus-logo height='25' width='25'/>
+            </div>
+            <div v-else>
+              <va-icon :name="route.meta.icon" class="va-sidebar-item__icon"/>
+            </div>
           </va-sidebar-item-title>
           <va-icon v-if="route.children" class="more_icon" :name="dropdownsValue[idx] ? 'chevron_left' : 'chevron_right'"/>          
         </va-sidebar-item-content>
@@ -34,9 +39,11 @@
 
 <script>
 import { useGlobalConfig } from 'vuestic-ui';
+import PlutusLogo from '@/components/plutus-logo.vue'
 
 export default {
   name: "AppMenuMinimized",
+  components: { PlutusLogo },
   props: {
     items: { type: Array, default: () => [] }
   },

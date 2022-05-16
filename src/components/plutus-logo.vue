@@ -1,0 +1,59 @@
+<template>
+  <svg
+    class="plutus-logo"
+    xmlns:dc="http://purl.org/dc/elements/1.1/"
+    xmlns:cc="http://creativecommons.org/ns#"
+    xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+    xmlns:svg="http://www.w3.org/2000/svg"
+    xmlns="http://www.w3.org/2000/svg"
+    id="svg949"
+    version="1.1"
+    viewBox="0 0 55.53 65.27"
+    height="50"
+    width="50">
+    <metadata
+      id="metadata955">
+      <rdf:RDF>
+        <cc:Work
+          rdf:about="">
+          <dc:format>image/svg+xml</dc:format>
+          <dc:type
+            rdf:resource="http://purl.org/dc/dcmitype/StillImage" />
+          <dc:title>logomark_light</dc:title>
+        </cc:Work>
+      </rdf:RDF>
+    </metadata>
+    <defs
+      id="defs953" />
+    <title
+      id="title945">logomark_light</title>
+    <rect
+      y="-15.59761"
+      x="-32.395035"
+      height="97.665031"
+      width="116.1422"
+      id="rect1518"
+      style="fill:#ffffff;fill-opacity:0" />
+    <path
+      style="fill:#2ad196;fill-opacity:1"
+      id="path947"
+      fill="#348b4f"
+      d="M44.72,5.8A27.722,27.722,0,0,0,.03,27.75L0,65.27H7V55.5H27.78a27.726,27.726,0,0,0,21.9-44.76A26.976,26.976,0,0,0,44.72,5.8ZM48,23.13v0H37.286l0,0,7.39-7.39A20.373,20.373,0,0,1,48,23.13ZM46.949,35.693H24.727l5.559-5.559h18.1A20.325,20.325,0,0,1,46.95,35.69ZM39.72,10.8,32.3,18.224V7.5h0A20.473,20.473,0,0,1,39.72,10.8ZM25.3,7.161V25.224l-5.557,5.557V8.62h0A20.353,20.353,0,0,1,25.3,7.161ZM7.03,27.75a20.646,20.646,0,0,1,5.709-14.269v24.3L7.03,43.49ZM11.92,48.5l5.807-5.807h24.43A20.67,20.67,0,0,1,27.78,48.5Z" />
+  </svg>
+</template>
+
+<script>
+export default {
+  name: 'PlutusLogo',
+}
+</script>
+
+<style lang="scss">
+.svg-image {
+   display: inline-block;
+   svg {
+     width: 50px;
+     height: 50px;
+   }
+  }
+</style>

@@ -10,28 +10,28 @@
             :color="colors.primary"
           />
           <router-link to="/">
-            <vuestic-logo class="logo"/>
+            <!-- <vuestic-logo/> -->
+            <!-- <plutus-logo/> -->
+            <plutus-logo-full/>
           </router-link>          
         </div>
       </template>
       <template v-slot:center>
         <span class="app-navbar__text">
-          {{$t('navbar.messageUs')}}&nbsp;
+          Questions? Suggestions?&nbsp;
           <a
-            href="mailto:hello@epicmax.co"
+            href="mailto:hello@joinplutus.com"
             target="_blank"
             :style="{color: colors.primary}"
           >
-            hello@epicmax.co
+            hello@joinplutus.com
           </a>
           <va-button
-            href="https://github.com/epicmaxco/vuestic-admin"
-            color="#000000"
-            class="app-navbar__github-button"
-            icon="github"
+            href="https://joinplutus.com"
+            color="#2ad196"
             target="_blank"
           >
-            {{$t('navbar.repository')}}
+            Plutus Website
           </va-button>
         </span>
       </template>
@@ -49,12 +49,12 @@
 import { useColors } from 'vuestic-ui'
 import { useStore } from 'vuex'
 import { computed } from 'vue'
-import VuesticLogo from '@/components/vuestic-logo'
+import PlutusLogoFull from '@/components/plutus-logo-full.vue'
 import VaIconMenuCollapsed from '@/components/icons/VaIconMenuCollapsed'
 import AppNavbarActions from './components/AppNavbarActions'
 
 export default {
-  components: { VuesticLogo, AppNavbarActions, VaIconMenuCollapsed },
+  components: { PlutusLogoFull, AppNavbarActions, VaIconMenuCollapsed },
   setup() {
     const { getColors } = useColors()
     const colors = computed(() => getColors() )

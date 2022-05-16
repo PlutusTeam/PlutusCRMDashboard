@@ -12,6 +12,14 @@ export default {
       },
     },
     {
+      name: 'plutus',
+      displayName: 'Plutus',
+      meta: {
+        icon: 'plutus-logo',
+      },
+      // disabled: true,
+    },
+    {
       name: 'statistics',
       displayName: 'menu.statistics',
       meta: {

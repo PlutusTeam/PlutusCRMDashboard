@@ -4,7 +4,12 @@
       <template #header>
         <va-sidebar-item :active="isRouteActive(route)" :to="route.children ? undefined : { name: route.name }">
           <va-sidebar-item-content>
-            <va-icon :name="route.meta.icon" class="va-sidebar-item__icon"/>
+            <div v-if="route.meta.icon=='plutus-logo'">
+              <plutus-logo height='25' width='25'/>
+            </div>
+            <div v-else>
+              <va-icon :name="route.meta.icon" class="va-sidebar-item__icon"/>
+            </div>
 
             <va-sidebar-item-title>
               {{ $t(route.displayName) }}
@@ -30,8 +35,11 @@
 </template>
 
 <script>
+import PlutusLogo from '@/components/plutus-logo.vue'
+
 export default {
   name: "AppMenuAccordion",
+  components: { PlutusLogo },
   props: {
     items: { type: Array, default: () => [] }
   },

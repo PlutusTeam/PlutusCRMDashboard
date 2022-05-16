@@ -1,0 +1,44 @@
+[
+    {
+        "plutus_id": "joschmo123",
+        "transaction_date": "04-06-2022",
+        "age": "23",
+        "total_spent": "$5.13",
+        "items_purchased": "Latte"
+    },
+    {
+        "plutus_id": "joschmo123",
+        "transaction_date": "03-30-2022",
+        "age": "23",
+        "total_spent": "$5.13",
+        "items_purchased": "Latte"
+    },
+    {
+        "plutus_id": "treeplanter00",
+        "transaction_date": "03-04-2022",
+        "age": "21",
+        "total_spent": "$6.41",
+        "items_purchased": "Cold Brew"
+    },
+    {
+        "plutus_id": "teddyfreddy",
+        "transaction_date": "02-23-2022",
+        "age": "20",
+        "total_spent": "$5.05",
+        "items_purchased": "Drip Coffee"
+    },
+    {
+        "plutus_id": "bobbyboo9",
+        "transaction_date": "12-17-2021",
+        "age": "20",
+        "total_spent": "$5.57",
+        "items_purchased": "Mocha"
+    },
+    {
+        "plutus_id": "joschmo123",
+        "transaction_date": "12-01-2022",
+        "age": "23",
+        "total_spent": "$5.46",
+        "items_purchased": "Latte"
+    }
+]

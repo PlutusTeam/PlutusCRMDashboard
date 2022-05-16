@@ -10,20 +10,25 @@ function colorToRgba(color: string, a: number) {
 }
 
 const generateValue = () => {
-  return Math.floor(Math.random() * 100)
+  const val = Math.floor(Math.random() * 10)
+  return val ? val : 1
 }
+const generateSaleValue = () => {
+    return parseFloat((Math.random() * 10).toFixed(2))
+  }
 
 const generateYLabels = () => {
-  const flip = !!Math.floor(Math.random() * 2)
-  return flip ? ['Debit', 'Credit'] : ['Credit', 'Debit']
+  // const flip = !!Math.floor(Math.random() * 2) 
+  return ['Transactions per day', 'Average sales per day']
 }
 
-const generateArray = (length: number) => {
-  return Array.from(Array(length), generateValue)
+const generateArray = (length: number, index: number) => {
+
+  return index? Array.from(Array(length), generateSaleValue) : Array.from(Array(length), generateValue)
 }
 
 const getSize = () => {
-  const minSize = 4
+  const minSize = 7
   return Math.max(minSize, new Date().getMonth())
 }
 
@@ -32,7 +37,7 @@ let firstMonthIndex = 0
 
 export const getLineChartData = (themes: ColorThemes, firstMonth: number) => {
   const size = getSize()
-  const months = ['January', 'February', 'March', 'April', 'May', 'June', 'July', 'August', 'September', 'October', 'November', 'December']
+  const months = ['04-01', '04-02', '04-03', '04-04', '04-05', '04-06', '04-07', 'August', 'September', 'October', 'November', 'December']
   const yLabels = generateYLabels()
 
   if (generatedData) {
@@ -53,13 +58,13 @@ export const getLineChartData = (themes: ColorThemes, firstMonth: number) => {
           label: yLabels[0],
           backgroundColor: colorToRgba(themes.primary, 0.6),
           borderColor: 'transparent',
-          data: generateArray(size - firstMonthIndex)
+          data: generateArray(size - firstMonthIndex, 0)
         },
         {
           label: yLabels[1],
           backgroundColor: colorToRgba(themes.info, 0.6),
           borderColor: 'transparent',
-          data: generateArray(size)
+          data: generateArray(size, 1)
         },
       ],
     }
